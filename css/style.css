@@ -7,46 +7,88 @@
 body{
     font-family:'source sans pro', sans-serif;
     line-height:1.5;
-    background:#F2F2F2;
+    /* background:#F2F2F2; */
     color:#323232;
     }
- .a h2{
+
+    .welcome-text {
+        padding: 10px;
+    }
+
+    .more-button {
+        background: #ea5b95;
+        color: #ffff;
+        padding: 10px;
+        border-radius: 4px;
+        box-shadow: none;
+        margin: 10px;
+    }
+
+    .welcome-text  h2{
+        text-align: center;
+    }
+
+    .nav-bg {
+        background: #ea5b95;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,.7);
+    }
+
+ .welcome-text  p{
      text-align: center;
- }
- .a p{
-     text-align: center;
-     color: blueviolet;
-     font-size: 30px;
+     color: #504e4e;
+     font-size: 16px;
  }
 section{
-    display: grid;
-	grid-template-rows: auto auto;
-	grid-gap: 30px;
-	padding: 24px 0;
+    display: flex;
 	border-bottom:1px solid lightgray;
-    margin:0;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 }
- section:hover{
-     background-color:lightgrey;
- }
- .column{
-     margin: 30px;
-     grid-gap: 30px;
-     justify-content: space-between;
- }
- .profile-image{
-     max-width: 100%;
-     float: left;
-     margin-right: 15px;
- }
- 
 
- @media only screen and (max-width :800px){
- section{
-    max-width: 80%;
-}
-.navbar-toggler-icon{
-    max-width: 100%;
-}
+ .profile-image-container {
+    flex: 0 0 400px;
+    order: 1;
+ }
+
+ .descriprion {
+     flex: 1 1 auto;
+     order: 1;
+ }
+
+
+ .profile-image{
+     width: 95%;
+ }
+
+
+ @media screen and (max-width :800px){
+        section{
+            /* max-width: 80%; */
+            flex-wrap: wrap;
+        }
+
+        .container {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+         .profile-image-container {
+            flex: 1 1 100%;
+            padding: 10px;
+            order: 1;
+        }
+
+        .descriprion {
+            flex: 1 1 100%;
+            order: 2;
+            padding: 10px;
+        }
+
+
+        .navbar-toggler-icon{
+            max-width: 100%;
+        }
 }
